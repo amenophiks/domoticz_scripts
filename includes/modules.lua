@@ -42,3 +42,19 @@ function groupOff(device)
    os.execute(curl..'"'..domoticzURL..'/json.htm?type=command&param=switchscene&idx='..otherdevices_scenesgroups_idx[device]..'&switchcmd=Off" &')
 end
 
+-- Open a blind      
+function blindOpen(device)
+   switchOff(device)
+end
+
+-- Close a blind      
+function blindClose(device)
+   switchOn(device)
+end
+
+-- Stop a blind
+function blindStop(device)
+   switchOn(device,16)
+end
+
+
